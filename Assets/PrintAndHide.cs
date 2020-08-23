@@ -10,7 +10,7 @@ public class PrintAndHide : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -18,5 +18,17 @@ public class PrintAndHide : MonoBehaviour
     {
         i++;
         UnityEngine.Debug.Log(gameObject.name + ": " + i);
+
+        if (gameObject.tag == "Red" && i == 100)
+        {
+            gameObject.SetActive(false);
+
+        }
+        else if (gameObject.tag == "Blue" && (i >= 200 && i <= 250 ))
+        {
+
+            rend.enabled = false;
+        }
+
     }
 }
